@@ -26,12 +26,12 @@ export default {
   mounted: function() {
     this.bounds = new google.maps.LatLngBounds();
     const element = document.getElementById(this.mapName);
-    const mapCentre = this.block.groups[0].location[0];
+    const mapCentre = this.block[0].location[0];
     const options = {
       center: new google.maps.LatLng(mapCentre.latitude, mapCentre.longitude)
     };
     this.map = new google.maps.Map(element, options);
-    this.block.groups.forEach(gloc => {
+    this.block.forEach(gloc => {
       const position = new google.maps.LatLng(
         gloc.location[0].latitude,
         gloc.location[0].longitude

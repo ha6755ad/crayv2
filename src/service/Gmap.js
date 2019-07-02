@@ -11,6 +11,6 @@ const apiClient = axios.create({
 
 export default {
   getGroups() {
-    return apiClient.get("/routes");
+    return apiClient.get("/groups");
   }
 };

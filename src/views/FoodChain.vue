@@ -69,8 +69,8 @@
                 <google-map
                   class="gmap"
                   name="example"
-                  v-for="block in blocks"
-                  :key="block.id"
+                  v-for="block in blocks"  
+                  :key="block.id"        
                   :block="block"
                 >
                 </google-map>
@@ -101,6 +101,7 @@ export default {
     Gmap.getGroups()
       .then(response => {
         this.blocks = response.data; // <--- set the groups data
+        alert(this.blocks[0].id)
       })
       .catch(error => {
         // eslint-disable-next-line no-console
